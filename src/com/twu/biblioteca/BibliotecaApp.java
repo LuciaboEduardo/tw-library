@@ -1,8 +1,13 @@
 package com.twu.biblioteca;
 
+import java.util.Arrays;
+
 public class BibliotecaApp {
 
     public static void main(String[] args) {
-        System.out.println("Welcome to the Library!");
+        Biblioteca biblioteca = new Biblioteca();
+
+        System.out.println(biblioteca.getWelcomeMessage());
+        System.out.println(Arrays.toString(biblioteca.getBooks()));
     }
 }
