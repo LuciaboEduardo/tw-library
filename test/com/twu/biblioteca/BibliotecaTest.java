@@ -1,12 +1,11 @@
 package com.twu.biblioteca;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-public class BibliotecaTest extends TestCase {
+public class BibliotecaTest {
     Biblioteca biblioteca = new Biblioteca();
 
     @Test
@@ -17,8 +16,10 @@ public class BibliotecaTest extends TestCase {
 
     @Test
     public void shouldReturnAllBooks() {
-        String[] mockBooks = {"Crepúsculo", "Lua Nova", "Eclipse", "Amanhecer"};
-        assertEquals(biblioteca.getBooks(), mockBooks);
+        String[] mockBooks = {
+            "Crepúsculo | Stephanie Meyer | 2007", "Lua Nova | Stephanie Meyer | 2008", "Eclipse | Stephanie Meyer | 2009", "Amanhecer | Stephanie Meyer | 2010"
+        };
+        assertArrayEquals(biblioteca.getBooks(), mockBooks);
     }
 
 }
